@@ -28,9 +28,10 @@ func main() {
 		}),
 	)
 	prop := gui.PlaceHolder("Fuck you piece of shit")
-	dynGrid := gui.DynamicGrid{float32(15)}
-	g := container.New(&dynGrid, &fyne.Container{})
+	dynGrid := &gui.TestLayout{}
+	g := dynGrid.Render()
 	fmt.Println("grid created.")
+
 	// h := container.NewAdaptiveGrid(2,
 	// 	g ,
 	// 	v,
